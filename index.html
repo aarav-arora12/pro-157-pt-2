@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+
+<head>  
+  <title>Virtual Comics</title>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+  <script src="js/Comics.js"></script>
+  <script src="js/Cusor.js"></script>
+</head>
+
+<body>
+  <a-scene id="main-scene">
+
+    <a-sky id="main-container" radius="5000" color="#98DAFC"></a-sky>
+
+    <!-- Places Container -->
+    <a-entity id="poster-container" comics></a-entity>
+
+    <a-entity
+    id="camera-cursor"
+    position="0 0 -3"
+    geometery="primitve:ring; radiusInner:0.08;radiusOuter:0.12"
+    material="color: orange; shader: flat"
+    >
+  </a-entity>
+
+    <!-- CAMERA -->
+    <a-camera id="camera" wasd-controls="enabled:true;">
+      <!-- App Title -->
+      <a-entity id="app-title" position="0 0.73 -1"
+        text="font: exo2bold; align: center; width: 2; color: #000; value: Comics Now Virtually Present!">
+        </a-entity>
+        <a-entity id="camera-cursor" position="0 0 -1"
+        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03" material="color: #fff; shader: flat">
+      </a-entity>
+      </a-entity>
+
+    </a-camera>
+  </a-scene>
+</body>
+
+</html>
